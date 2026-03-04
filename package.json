@@ -1,0 +1,50 @@
+{
+  "name": "unitfyi",
+  "version": "0.1.0",
+  "description": "Pure TypeScript unit conversion engine — 200 units across 20 categories, temperature formulas, smart rounding. Zero dependencies.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "unit",
+    "conversion",
+    "units",
+    "measurement",
+    "temperature",
+    "length",
+    "weight",
+    "volume",
+    "area",
+    "speed",
+    "pressure",
+    "energy",
+    "cooking",
+    "typography"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fyipedia/unitfyi-js"
+  },
+  "homepage": "https://unitfyi.com",
+  "license": "MIT",
+  "author": "FYIPedia",
+  "devDependencies": {
+    "tsup": "^8.0",
+    "typescript": "^5.7",
+    "vitest": "^3.0"
+  }
+}
