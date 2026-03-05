@@ -17,10 +17,11 @@ Pure TypeScript unit conversion engine for developers. [Convert between 200 unit
 
 - [Install](#install)
 - [Quick Start](#quick-start)
-- [Precision in Unit Conversion](#precision-in-unit-conversion)
-- [Temperature Conversion](#temperature-conversion)
-- [Conversion Tables](#conversion-tables)
-- [Unit Lookup](#unit-lookup)
+- [What You Can Do](#what-you-can-do)
+  - [Precision in Unit Conversion](#precision-in-unit-conversion)
+  - [Temperature Conversion](#temperature-conversion)
+  - [Conversion Tables](#conversion-tables)
+  - [Unit Lookup](#unit-lookup)
 - [API Reference](#api-reference)
 - [TypeScript Types](#typescript-types)
 - [Features](#features)
@@ -64,7 +65,9 @@ const lengthUnits = getCategoryUnits("length");
 console.log(lengthUnits.length); // 20 (meter, km, cm, mm, ...)
 ```
 
-## Precision in Unit Conversion
+## What You Can Do
+
+### Precision in Unit Conversion
 
 JavaScript uses IEEE 754 double-precision floats. For most unit conversions this is sufficient, but temperature and very large/small values use smart rounding to avoid floating-point artifacts like `99.99999999996`.
 
@@ -79,7 +82,24 @@ The engine applies magnitude-aware rounding:
 
 Temperature conversions use function-based formulas (not linear factors) to maintain exact results: `°F = (°C * 9/5) + 32`, `K = °C + 273.15`, etc.
 
-## Temperature Conversion
+The engine covers **20 measurement categories** with a total of **200 units**:
+
+| Category | Units | Examples |
+|----------|-------|---------|
+| **Length** | 20 | meter, kilometer, mile, foot, inch, yard, nautical mile, ... |
+| **Weight** | 15 | kilogram, pound, ounce, gram, stone, metric ton, ... |
+| **Temperature** | 4 | Celsius, Fahrenheit, Kelvin, Rankine |
+| **Volume** | 15 | liter, gallon (US/UK), cup, tablespoon, fluid ounce, ... |
+| **Area** | 10 | square meter, acre, hectare, square foot, ... |
+| **Speed** | 8 | km/h, mph, m/s, knot, Mach, speed of light, ... |
+| **Data Storage** | 16 | byte, KB, MB, GB, TB, PB, KiB, MiB, GiB, ... |
+| **Pressure** | 8 | pascal, bar, atm, psi, mmHg, torr, ... |
+| **Energy** | 10 | joule, calorie, kWh, BTU, eV, ... |
+| **Cooking** | 8 | cup, tablespoon, teaspoon, fluid ounce, ... |
+
+Learn more: [Unit Converter](https://unitfyi.com/) · [SI Base Units](https://en.wikipedia.org/wiki/International_System_of_Units) · [Category Explorer](https://unitfyi.com/category/)
+
+### Temperature Conversion
 
 ```typescript
 import { convert } from "unitfyi";
@@ -100,7 +120,9 @@ const f2r = convert(100, "fahrenheit", "rankine");
 console.log(f2r.result);        // 559.67
 ```
 
-## Conversion Tables
+Learn more: [Temperature Converter](https://unitfyi.com/category/temperature/) · [Absolute Zero](https://en.wikipedia.org/wiki/Absolute_zero)
+
+### Conversion Tables
 
 ```typescript
 import { conversionTable } from "unitfyi";
@@ -116,7 +138,9 @@ const custom = conversionTable("celsius", "fahrenheit", [0, 20, 37, 100]);
 // [[0, 32], [20, 68], [37, 98.6], [100, 212]]
 ```
 
-## Unit Lookup
+Learn more: [Conversion Tables](https://unitfyi.com/tools/table/) · [REST API Docs](https://unitfyi.com/developers/)
+
+### Unit Lookup
 
 ```typescript
 import { getUnit, getCategoryUnits, getOrderedCategories } from "unitfyi";
@@ -138,6 +162,8 @@ for (const cat of cats) {
   console.log(`${cat.icon} ${cat.name}: ${cat.description}`);
 }
 ```
+
+Learn more: [All Units](https://unitfyi.com/unit/) · [OpenAPI Spec](https://unitfyi.com/api/openapi.json)
 
 ## API Reference
 
