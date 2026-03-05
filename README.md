@@ -9,6 +9,10 @@ Pure TypeScript unit conversion engine for developers. [Convert between 200 unit
 
 > **Try the interactive tools at [unitfyi.com](https://unitfyi.com/)** -- unit converter, conversion tables, and category explorer.
 
+<p align="center">
+  <img src="demo.gif" alt="unitfyi demo — unit conversion with precision" width="800">
+</p>
+
 ## Install
 
 ```bash
