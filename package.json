@@ -1,6 +1,6 @@
 {
   "name": "unitfyi",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pure TypeScript unit conversion engine — 200 units across 20 categories, temperature formulas, smart rounding. Zero dependencies.",
   "type": "module",
   "main": "dist/index.js",
