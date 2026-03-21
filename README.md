@@ -97,9 +97,7 @@ The engine covers **20 measurement categories** with a total of **200 units**:
 | **Energy** | 10 | joule, calorie, kWh, BTU, eV, ... |
 | **Cooking** | 8 | cup, tablespoon, teaspoon, fluid ounce, ... |
 
-Learn more: [Unit Converter](https://unitfyi.com/) · [SI Base Units](https://en.wikipedia.org/wiki/International_System_of_Units) · [Category Explorer](https://unitfyi.com/category/)
-
-### Temperature Conversion
+Learn more: [Unit Converter](https://unitfyi.com/) · [SI Base Units](https://en.wikipedia.org/wiki/International_System_of_Units) · ### Temperature Conversion
 
 ```typescript
 import { convert } from "unitfyi";
@@ -120,7 +118,7 @@ const f2r = convert(100, "fahrenheit", "rankine");
 console.log(f2r.result);        // 559.67
 ```
 
-Learn more: [Temperature Converter](https://unitfyi.com/category/temperature/) · [Absolute Zero](https://en.wikipedia.org/wiki/Absolute_zero)
+Learn more: [Temperature Converter](temperature/) · [Absolute Zero](https://en.wikipedia.org/wiki/Absolute_zero)
 
 ### Conversion Tables
 
@@ -138,7 +136,7 @@ const custom = conversionTable("celsius", "fahrenheit", [0, 20, 37, 100]);
 // [[0, 32], [20, 68], [37, 98.6], [100, 212]]
 ```
 
-Learn more: [Conversion Tables](https://unitfyi.com/tools/table/) · [REST API Docs](https://unitfyi.com/developers/)
+Learn more: [REST API Docs](https://unitfyi.com/developers/)
 
 ### Unit Lookup
 
@@ -163,7 +161,7 @@ for (const cat of cats) {
 }
 ```
 
-Learn more: [All Units](https://unitfyi.com/unit/) · [OpenAPI Spec](https://unitfyi.com/api/openapi.json)
+Learn more: [OpenAPI Spec](https://unitfyi.com/api/openapi.json)
 
 ## API Reference
 
@@ -225,9 +223,7 @@ import type {
 
 ## Learn More About Units
 
-- **Tools**: [Unit Converter](https://unitfyi.com/) · [Conversion Tables](https://unitfyi.com/tools/table/)
-- **Browse**: [Categories](https://unitfyi.com/category/) · [All Units](https://unitfyi.com/unit/)
-- **API**: [REST API Docs](https://unitfyi.com/developers/) · [OpenAPI Spec](https://unitfyi.com/api/openapi.json)
+- **Tools**: [Unit Converter](https://unitfyi.com/) · - **Browse**: - **API**: [REST API Docs](https://unitfyi.com/developers/) · [OpenAPI Spec](https://unitfyi.com/api/openapi.json)
 - **Python**: [PyPI Package](https://pypi.org/project/unitfyi/)
 
 ## Also Available for Python
